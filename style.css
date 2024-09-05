@@ -147,6 +147,7 @@ body {
 .map-reseption{
     background-image: url('img/bg-polos.png');
     height: 600px;
+    border-radius: 25px;
     width: auto;
     background-size: cover;
     padding-top: 20px;
