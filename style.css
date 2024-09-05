@@ -5,7 +5,7 @@ html {
 }
 
 body {
-    background-image: url('bg.jpg');
+    background-image: url('img/bg.svg');
 }
 .btn-audio{
     position: fixed;
