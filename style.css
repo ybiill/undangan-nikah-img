@@ -81,13 +81,84 @@ body {
     /* Menyembunyikan elemen audio */
 }
 
+.loading-screen {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+    position: relative; /* For absolute positioning of curtains */
+    overflow: hidden;
+}
+
+.invitation-container {
+    text-align: center;
+    z-index: 2; /* Make sure content is above curtains */
+}
+
+.couple-image {
+    margin: 20px 0;
+}
+
+.couple-image img {
+    width: 200px; /* Adjust size as needed */
+    border-radius: 50%;
+}
+
+.open-invitation {
+    background-color: #fff;
+    color: #000;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 20px;
+    z-index: 2; /* Above curtains */
+}
+
+.open-invitation:hover {
+    background-color: #ddd;
+}
+
+.curtain-left,
+.curtain-right {
+    position: absolute;
+    top: 0;
+    width: 50%;
+    height: 100%;
+    background-image: url('img/bg.svg'); /* Curtain color */
+    z-index: 1;
+    transition: transform 1.5s ease; /* Smooth curtain animation */
+}
+
+.curtain-left {
+    left: 0;
+    transform: translateX(0); /* Start position */
+}
+
+.curtain-right {
+    right: 0;
+    transform: translateX(0); /* Start position */
+}
+.location-reseption{
+    margin-top: 200px;
+}
+
 /* Media query for smartphones */
 @media (max-width: 500px) {
     .navbar-flower {
-        max-width: 80%;
+        max-width: 60%;
         /* Full width on small screens */
     }
-
+    .location-reseption{
+        margin-top: 80px;
+    }
+    .invitation-container img {
+        width: 350px !important;
+        text-align: center;
+        z-index: 2; /* Make sure content is above curtains */
+    }
     .container-custom {
         max-width: 100%;
     }
@@ -95,22 +166,29 @@ body {
         position: absolute;
         margin-top: auto;
         margin-bottom: auto;
-        bottom: -90px;
+        bottom: -80px;
         width: 100%;
         z-index: 10;
     }
 
     .floral-design {
-        max-width: 100%;
+        max-width: 70%;
         height: auto;
     }
 }
 @media (min-width: 540px) and (max-width: 840px) {
+    .navbar-flower {
+        max-width: 70%;
+        /* Full width on small screens */
+    }
+    .location-reseption{
+        margin-top: 100px;
+    }
     .footer {
         position: absolute;
         margin-top: auto;
         width: 100%;
-        bottom: -10px;
+        bottom: -200px;
         z-index: 10;
     }
 
