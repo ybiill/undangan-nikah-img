@@ -1,0 +1,121 @@
+body,
+html {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-image: url('bg.jpg');
+}
+.btn-audio{
+    position: fixed;
+    border: none;
+    background: none;
+    cursor: pointer;
+    z-index: 10;
+}
+.btn-audio img {
+    width: 50px; /* Atur ukuran sesuai kebutuhan */
+    height: auto;
+}
+.container-navbar {
+    top: 0;
+    position: absolute;
+    width: 100%;
+    z-index: 10;
+    /* Keeps navbar and footer above the carousel */
+}
+
+.navbar {
+    top: 0;
+    /* Adjusts navbar to the top */
+    left: 50%;
+    transform: translateX(-50%);
+    max-width: 600px;
+    /* Maximum width */
+}
+
+.navbar-flower {
+    width: 400px;
+}
+
+.container-custom {
+    position: relative;
+    /* Context for the absolute positioning */
+    width: 100%;
+    /* Full width */
+    max-width: 600px;
+    /* Max width */
+    margin-left: auto;
+    /* Center horizontally */
+    margin-right: auto;
+    /* Center horizontally */
+    margin-top: 100px;
+    /* Center horizontally */
+    padding: 20px;
+}
+.carousel
+{height: 750px;}
+
+.carousel-item img {
+    width: 100%;
+    /* Full width */
+    height: auto;
+    /* Maintain aspect ratio */
+}
+
+.footer {
+    position: absolute;
+    margin-top: auto;
+    width: 100%;
+    z-index: 10;
+}
+
+.floral-design {
+    width: 700px;
+    height: auto;
+}
+
+.hiddenAudio {
+    display: none;
+    /* Menyembunyikan elemen audio */
+}
+
+/* Media query for smartphones */
+@media (max-width: 500px) {
+    .navbar-flower {
+        max-width: 80%;
+        /* Full width on small screens */
+    }
+
+    .container-custom {
+        max-width: 100%;
+    }
+    .footer {
+        position: absolute;
+        margin-top: auto;
+        margin-bottom: auto;
+        bottom: -90px;
+        width: 100%;
+        z-index: 10;
+    }
+
+    .floral-design {
+        max-width: 100%;
+        height: auto;
+    }
+}
+@media (min-width: 540px) and (max-width: 840px) {
+    .footer {
+        position: absolute;
+        margin-top: auto;
+        width: 100%;
+        bottom: -10px;
+        z-index: 10;
+    }
+
+    .floral-design {
+        max-width: 100%;
+        height: auto;
+    }
+}

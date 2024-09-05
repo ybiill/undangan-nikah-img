@@ -1,0 +1,9 @@
+# Mengaktifkan Rewrite Engine
+RewriteEngine On
+
+# Mengatur index.html sebagai halaman default tanpa perlu menuliskan 'index.html' di URL
+DirectoryIndex index.html
+
+# Mengalihkan 'index.html' ke root URL (menghapus 'index.html' dari URL)
+RewriteCond %{THE_REQUEST} /index\.html [NC]
+RewriteRule ^(.*)index\.html$ /$1 [R=301,L]
